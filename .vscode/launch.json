@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "tsx",
+      "program": "${workspaceFolder}/src/index.ts",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/tsx",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "vs code debug",
+      "outFiles": ["${workspaceFolder}/build/**/*.js"],
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "program": "${workspaceFolder}/src/index.ts",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "Debug 21.5.0",
+      "program": "${workspaceFolder}/src/index.ts",
+      "request": "launch",
+      "runtimeArgs": ["--import", "tsx/esm"],
+      "runtimeExecutable": "/home/ngoro/.nvm/versions/node/v21.5.0/bin/node",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}
