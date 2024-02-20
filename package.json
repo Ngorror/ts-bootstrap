@@ -1,0 +1,39 @@
+{
+  "author": "ngorror",
+  "description": "",
+  "devDependencies": {
+    "@types/node": ">=20.11.17",
+    "tsx": ">=4.7.1",
+    "typescript": ">=5.3.3"
+  },
+  "engines": {
+    "node": ">=21.6.2",
+    "npm": ">=10.2.4"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "code",
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 80,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "scripts": {
+    "build": "rm -f -R build && tsc -p tsconfig.build.json",
+    "dev": "node --no-warnings --env-file=.env --import tsx/esm src/index.ts",
+    "packages": "npm list --depth=0",
+    "packages:clear": "rm -f -R node_modules && rm -f package-lock.json",
+    "packages:install": "npm run packages:clear && npm install",
+    "packages:outdated": "npm outdated --depth=0",
+    "start": "node --no-warnings --env-file=.env --import tsx/esm ./src/index.ts",
+    "start:production": "node build/index.js",
+    "tsc:watch": "tsc --watch",
+    "typecheck": "tsc",
+    "watch": "node --no-warnings --watch --env-file=.env --import tsx/esm ./src/index.ts"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
