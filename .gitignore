@@ -1,0 +1,14 @@
+.idea
+node_modules
+
+# mac
+.DS_Store
+
+# we don't need dev dependencies lock file
+package-lock.json
+
+#.env files
+.env
+
+# build files
+build
