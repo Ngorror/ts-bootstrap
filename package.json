@@ -63,7 +63,7 @@
     "prepare": "husky",
     "start": "node --no-warnings --env-file=.env --import tsx/esm ./src/index.ts",
     "start:production": "node build/index.js",
-    "test": "echo Do not forget to add testing",
+    "test": "echo TODO: Do not forget to add testing",
     "tsc:watch": "tsc --watch",
     "typecheck": "tsc",
     "watch": "node --no-warnings --watch --env-file=.env --import tsx/esm ./src/index.ts"
