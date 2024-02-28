@@ -2,18 +2,44 @@
   "author": "ngorror",
   "description": "",
   "devDependencies": {
-    "@types/node": ">=20.11.17",
-    "tsx": ">=4.7.1",
-    "typescript": ">=5.3.3"
+    "@types/node": "^20.11.21",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-security": "^2.1.1",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=21.6.2",
-    "npm": ">=10.2.4"
+    "node": "21.5.0",
+    "npm": "10.2.4"
   },
+  "homepage": "https://github.com/Ngorror/ts-bootstrap",
   "keywords": [],
   "license": "ISC",
-  "main": "index.js",
-  "name": "code",
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "main": "src/index.js",
+  "maintainers": [
+    {
+      "email": "ngorror@gmail.com",
+      "name": "ngorror"
+    }
+  ],
+  "name": "ts-bootstrap",
   "prettier": {
     "arrowParens": "always",
     "printWidth": 80,
@@ -21,15 +47,23 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ngorror/ts-bootstrap.git"
+  },
   "scripts": {
     "build": "rm -f -R build && tsc -p tsconfig.build.json",
     "dev": "node --no-warnings --env-file=.env --import tsx/esm src/index.ts",
+    "lint": "npx eslint --fix .",
     "packages": "npm list --depth=0",
     "packages:clear": "rm -f -R node_modules && rm -f package-lock.json",
     "packages:install": "npm run packages:clear && npm install",
     "packages:outdated": "npm outdated --depth=0",
+    "prepare": "husky",
     "start": "node --no-warnings --env-file=.env --import tsx/esm ./src/index.ts",
     "start:production": "node build/index.js",
+    "test": "echo TODO: Do not forget to add testing",
     "tsc:watch": "tsc --watch",
     "typecheck": "tsc",
     "watch": "node --no-warnings --watch --env-file=.env --import tsx/esm ./src/index.ts"

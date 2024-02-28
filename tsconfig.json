@@ -41,6 +41,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
+    "typeRoots": ["node_modules/@types/node"],
     "useUnknownInCatchVariables": true
   },
   "exclude": ["node_modules"],
