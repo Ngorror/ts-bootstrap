@@ -1,0 +1,6 @@
+echo "typechecking"
+npm run typecheck
+echo "linting and prettyfying"
+npx lint-staged
+echo "testing"
+npm test
