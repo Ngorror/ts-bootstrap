@@ -11,15 +11,15 @@
       "type": "node"
     },
     {
-      "name": "vs code debug",
+      "name": "tsc",
       "outFiles": ["${workspaceFolder}/build/**/*.js"],
-      "preLaunchTask": "tsc: build - tsconfig.json",
+      "preLaunchTask": "tsc: build - tsconfig.build.json",
       "program": "${workspaceFolder}/src/index.ts",
       "request": "launch",
       "type": "node"
     },
     {
-      "name": "Debug 21.5.0",
+      "name": "node",
       "program": "${workspaceFolder}/src/index.ts",
       "request": "launch",
       "runtimeArgs": ["--import", "tsx/esm"],
