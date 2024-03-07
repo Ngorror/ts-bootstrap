@@ -3,7 +3,7 @@
     {
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "name": "via tsx",
+      "name": "tsx",
       "program": "${workspaceFolder}/src/index.ts",
       "request": "launch",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/tsx",
@@ -11,7 +11,7 @@
       "type": "node"
     },
     {
-      "name": "via tsc: build as prelaunch task in vs code debug",
+      "name": "tsc",
       "outFiles": ["${workspaceFolder}/build/**/*.js"],
       "preLaunchTask": "tsc: build - tsconfig.build.json",
       "program": "${workspaceFolder}/src/index.ts",
@@ -19,7 +19,7 @@
       "type": "node"
     },
     {
-      "name": "via 21.5.0 and tsx/esm shim",
+      "name": "node",
       "program": "${workspaceFolder}/src/index.ts",
       "request": "launch",
       "runtimeArgs": ["--import", "tsx/esm"],
