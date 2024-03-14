@@ -23,7 +23,7 @@
       "program": "${workspaceFolder}/src/index.ts",
       "request": "launch",
       "runtimeArgs": ["--import", "tsx/esm"],
-      "runtimeExecutable": "/home/ngoro/.nvm/versions/node/v21.5.0/bin/node",
+      "runtimeExecutable": "${env:NVM_BIN}/node",
       "skipFiles": ["<node_internals>/**"],
       "type": "node"
     }
