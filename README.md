@@ -10,7 +10,7 @@ typescript bootstrap project based on `tsx` with working vscode debug configurat
 
 ### Done
 
-- [x] `.env` file with multiline variable can be read with `node` version `>=27.1.0`
+- [x] `.env` file with multiline variable can be read with `node` version `>=21.7.0`
 
 ### To Do
 
