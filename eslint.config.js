@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import jsdoc from 'eslint-plugin-jsdoc';
 import json from 'eslint-plugin-json';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import node from 'eslint-plugin-n';
 import promise from 'eslint-plugin-promise';
 import security from 'eslint-plugin-security';
 import sonarjs from 'eslint-plugin-sonarjs';
@@ -17,6 +18,7 @@ export default [
   js.configs.recommended,
   jsdoc.configs['flat/recommended-typescript-flavor'],
   json.configs.recommended,
+  node.configs['flat/recommended-script'],
   promise.configs.recommended,
   security.configs.recommended,
   sonarjs.configs.recommended,
@@ -32,6 +34,14 @@ export default [
     },
     rules: {
       'json/*': 'error',
+      'n/exports-style': ['error', 'module.exports'],
+      'n/no-extraneous-import': [
+        'error',
+        {
+          allowModules: ['@eslint/js'],
+          resolvePaths: [],
+        },
+      ],
       'prettier/prettier': ['error'],
       strict: ['error', 'never'],
       'unused-imports/no-unused-imports': 'error',
